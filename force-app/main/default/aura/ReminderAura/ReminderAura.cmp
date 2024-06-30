@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="String" default="Hello, Salesforce!"/>
+    
+    <div>
+        <p>{!v.message}</p>
+        <lightning:button label="Click Me" onclick="{!c.handleClick}"/>
+    </div>
+</aura:component>

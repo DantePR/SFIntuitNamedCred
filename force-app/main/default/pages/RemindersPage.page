@@ -1,0 +1,14 @@
+<apex:page controller="RemindersController">
+    <apex:form>
+        <apex:pageBlock title="Reminder List">
+            <apex:pageBlockButtons>
+                <apex:commandButton action="{!refresh}" value="Refresh"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!reminders}" var="reminder">
+                <apex:column headerValue="Reminder Name">
+                    <apex:outputLink value="/{!reminder.Id}">{!reminder.Name}</apex:outputLink>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

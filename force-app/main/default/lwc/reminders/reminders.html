@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Reminders List">
+        <template for:each={reminders} for:item="reminder">
+            <p key={reminder.Id}>{reminder.Name}</p>
+        </template>
+        <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Quick Book Invoices">
+        <template for:each={invoices} for:item="invoice">
+            <p key={invoice.Id}>{invoice.Name}</p>
+        </template>
+        <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+    </lightning-card>
+</template>
